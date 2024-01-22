@@ -2,7 +2,7 @@
 @use 'header';
 @use 'sideBar';
 @use 'main';
-
+@use 'buttons';
 #app{
     display: flex;
     flex-direction: column;
