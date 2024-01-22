@@ -2,20 +2,21 @@
 aside{
     height: 100vh;
     width: 20vw;
-
+    position: relative;
     .side_bar{
         background-color: var(--side-bar);
         height: 80%;
         width: 100%;
         border-radius: 0 0.5rem 0.5rem 0;
         padding: 1rem;
+        position: absolute;
+        left: -100%;
+
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        transform: translateX(-500px);
         box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
         transition: 1s;
-
         .btn_copy{
             color: var(--White);
             padding: 1rem 2rem;
@@ -32,7 +33,6 @@ aside{
         }
 
         .result{
-            background-color: transparent;
             color: var(--text-secondary);
             font-size: 20px;
 
@@ -42,7 +42,7 @@ aside{
         }
 
        &.enable{
-        transform: translateX(0px);
+        left: 0%;
        }
     }
  
@@ -52,7 +52,8 @@ aside{
     aside{
         width: 50vw;
         .side_bar{
-            transform: translateX(-400px);
+            left: -100%;
+            z-index: 1000;
         }
     }
 }

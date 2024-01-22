@@ -15,8 +15,8 @@
 body{
     height: 100vh;
     background-color: var(--bg-color);
-    overflow: hidden;
     font-family: "Lato", sans-serif;
+    overflow: hidden;
 }
 
 p{
@@ -35,6 +35,7 @@ a{
     text-decoration: none;
 }
 textarea{
+    background-color: transparent;
     outline: none;
     border: none;
     resize: none;

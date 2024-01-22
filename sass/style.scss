@@ -1,3 +1,9 @@
 @use 'global';
 @use 'header';
 @use 'sideBar';
+@use 'main';
+
+#app{
+    display: flex;
+    flex-direction: column;
+}
