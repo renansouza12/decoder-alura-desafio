@@ -2,7 +2,7 @@
 :root {
   --bg-color:#E9DCD6;
   --text-primary:#664242;
-  --nav-bar:#746770;
+  --side-bar:#746770;
   --text-secondary:#D0BCB1;
   --White:#FFFFFF;
 }
@@ -16,13 +16,117 @@
 body {
   height: 100vh;
   background-color: var(--bg-color);
+  overflow: hidden;
+  font-family: "Lato", sans-serif;
+}
+
+p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  text-align: justify;
+}
+
+button {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+  resize: none;
 }
 
 header {
   width: 100vw;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem;
+}
+header i {
+  font-size: 30px;
+  color: var(--text-primary);
+}
+header .menu, header .github {
+  cursor: pointer;
+  transition: 0.7s;
+}
+header .menu .ri-menu-5-line {
+  display: block;
+}
+header .menu .ri-arrow-drop-right-line {
+  display: none;
+}
+header .menu:hover {
+  background-color: var(--text-secondary);
+}
+header .menu:hover .ri-menu-5-line {
+  display: none;
+}
+header .menu:hover .ri-arrow-drop-right-line {
+  display: block;
+}
+
+aside {
+  height: 100vh;
+  width: 20vw;
+}
+aside .side_bar {
+  background-color: var(--side-bar);
+  height: 80%;
+  width: 100%;
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  transform: translateX(-500px);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: 1s;
+}
+aside .side_bar .btn_copy {
+  color: var(--White);
+  padding: 1rem 2rem;
+  border: 1px solid var(--White);
+  letter-spacing: 2px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+aside .side_bar .btn_copy:hover {
+  background-color: var(--White);
+  color: var(--side-bar);
+}
+aside .side_bar .result {
+  background-color: transparent;
+  color: var(--text-secondary);
+  font-size: 20px;
+}
+aside .side_bar .result::placeholder {
+  color: var(--text-secondary);
+}
+aside .side_bar.enable {
+  transform: translateX(0px);
+}
+
+@media (max-width: 768px) {
+  aside {
+    width: 50vw;
+  }
+  aside .side_bar {
+    transform: translateX(-400px);
+  }
+}
+@media (max-width: 425px) {
+  aside {
+    width: 60vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

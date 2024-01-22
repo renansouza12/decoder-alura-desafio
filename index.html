@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div id="app">
         <header>
+            <div class="menu">
+                <i class="ri-menu-5-line"></i>
+                <i class="ri-arrow-drop-right-line"></i>
+            </div>
             <img src="assets/alura-logo.svg" alt="alura logo">
+            <div class="github">
+                <a href="https://github.com/renansouza12/">
+                    <i class="ri-github-line"></i>
+                </a>
+
+            </div>
         </header>
+
+        <aside>
+            <div class="side_bar">
+                <textarea class="result" cols="30" rows="10"   placeholder="O resultado aparecerá aqui"></textarea>
+
+                <button class="btn_copy">
+                    Copiar
+                </button>
+            </div>
+
+        </aside>
     </div>
+
+    <script src="js/sidebar.js"></script>
 </body>
+
 </html>

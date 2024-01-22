@@ -1,6 +1,36 @@
 header{
     width: 100vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem;
+
+    i{ 
+        font-size: 30px;
+        color: var(--text-primary);
+
+    }
+    .menu,.github{
+        cursor: pointer;
+        transition: 0.7s;
+    }
+    .menu{ 
+        .ri-menu-5-line{
+            display: block;
+        }
+        .ri-arrow-drop-right-line{
+            display: none;
+        }
+    }
+    .menu:hover{
+        background-color: var(--text-secondary);
+        .ri-menu-5-line{
+            display: none;
+        }
+        .ri-arrow-drop-right-line{
+            display: block;
+        }
+
+    }
+
 }

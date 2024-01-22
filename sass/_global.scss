@@ -1,7 +1,7 @@
 :root{
     --bg-color:#E9DCD6;
     --text-primary:#664242;
-    --nav-bar:#746770;
+    --side-bar:#746770;
     --text-secondary:#D0BCB1;
     --White:#FFFFFF;
 }
@@ -15,4 +15,27 @@
 body{
     height: 100vh;
     background-color: var(--bg-color);
+    overflow: hidden;
+    font-family: "Lato", sans-serif;
+}
+
+p{
+    font-size: 15px;
+    color: var(--text-secondary);
+    text-align: justify;
+}
+
+button{
+    outline: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+textarea{
+    outline: none;
+    border: none;
+    resize: none;
 }
