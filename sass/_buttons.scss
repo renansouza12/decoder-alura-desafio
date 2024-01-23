@@ -7,7 +7,7 @@
     align-items: center;
     gap: 3rem;
     button{
-        color: var(--White);
+        color: var(--text-primary);
         letter-spacing: 3px;
         font-size: 2vw;
         position: relative;
@@ -37,7 +37,7 @@
         }
         &:hover{
             background-color: var(--White);
-            color: var(--text-primary);
+            color: var(--text-secondary);
         }
     }
    

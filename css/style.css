@@ -160,7 +160,7 @@ main .decoder_container .decoder_text::placeholder {
   gap: 3rem;
 }
 .btns button {
-  color: var(--White);
+  color: var(--text-primary);
   letter-spacing: 3px;
   font-size: 2vw;
   position: relative;
@@ -189,7 +189,7 @@ main .decoder_container .decoder_text::placeholder {
 }
 .btns button:hover {
   background-color: var(--White);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 @media (max-width: 768px) {

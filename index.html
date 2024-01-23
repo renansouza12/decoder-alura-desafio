@@ -26,7 +26,7 @@
 
         <aside>
             <div class="side_bar">
-                <textarea class="result" cols="30" rows="0" placeholder="O resultado aparecerá aqui"></textarea>
+                <textarea class="result" cols="30" rows="0" readonly placeholder="O resultado aparecerá aqui"></textarea>
 
                 <button class="btn_copy">
                     Copiar
@@ -39,14 +39,15 @@
             <div class="decoder_container">
                 <textarea class="decoder_text" cols="30" rows="10" placeholder="Digite aqui..."></textarea>
             </div>
-        </main>
+        </main> 
 
         <div class="btns">
-            <button>Criptografar</button>
-            <button>Descriptografar</button>
+            <button class="btn_encrypt">Criptografar</button>
+            <button class="btn_decrypt">Descriptografar</button>
         </div>
     </div>
 
+    <script src="./js/decoder.js"></script>
     <script src="js/sidebar.js"></script>
 </body>
 
