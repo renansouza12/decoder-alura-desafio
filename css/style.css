@@ -257,7 +257,7 @@ main .decoder_container .decoder_text::placeholder {
   }
 }
 .message_warning {
-  position: absolute;
+  position: fixed;
   top: 5%;
   right: -5%;
   transform: translate(-50%, -50%);
