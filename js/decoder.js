@@ -23,18 +23,18 @@ function displayTextDecrypt() {
  
 
 function textEncrypt() {
-    return decoderInput.value.replace("e", "enter")
-    .replace("i", "imes")
-    .replace("a", "ai")
-    .replace("o", "ober")
-    .replace("u", "ufat")
+    return decoderInput.value.replaceAll("e", "enter")
+    .replaceAll("i", "imes")
+    .replaceAll("a", "ai")
+    .replaceAll("o", "ober")
+    .replaceAll("u", "ufat")
 }
 function textDecrypt() {
-    return decoderInput.value.replace("enter", "e")
-    .replace("imes", "i")
-    .replace("ai", "a")
-    .replace("ober", "o")
-    .replace("ufat", "u")
+    return decoderInput.value.replaceAll("enter", "e")
+    .replaceAll("imes", "i")
+    .replaceAll("ai", "a")
+    .replaceAll("ober", "o")
+    .replaceAll("ufat", "u")
 }
 
 function removeClassBtn(){
