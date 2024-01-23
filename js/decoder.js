@@ -9,11 +9,18 @@ btnDecrypt.addEventListener("click", () => displayTextDecrypt());
 
 
 function displayTextEncrypt() {
+    
     //variavel result foi declarada no sidebar.js
-   result.value = textEncrypt();
+    result.value = textEncrypt();
+    //variavel btnCopyText e btnCopiedText foram declaradas no sidebar.js 
+    btnCopyText.classList.remove("copied");
+    btnCopiedText.classList.remove("active");
+
+   decoderInput.value = "";
 }
 function displayTextDecrypt() {
     result.value = textDecrypt();
+    decoderInput.value = "";
  }
  
 

@@ -95,15 +95,32 @@ aside .side_bar {
   transition: 1s;
 }
 aside .side_bar .btn_copy {
-  color: var(--White);
-  padding: 1rem 2rem;
+  height: 3rem;
+  width: 100%;
   border: 1px solid var(--White);
+  transition: 0.5s;
+  color: var(--White);
   letter-spacing: 2px;
   font-weight: bold;
+  overflow: hidden;
+}
+aside .side_bar .btn_copy .btn_copy_txt {
   transition: 0.5s;
+}
+aside .side_bar .btn_copy .btn_copy_txt.copied {
+  display: none;
+}
+aside .side_bar .btn_copy .btn_copied_txt {
+  display: none;
+}
+aside .side_bar .btn_copy .btn_copied_txt.active {
+  display: block;
+  animation: copied 0.5s forwards ease;
 }
 aside .side_bar .btn_copy:hover {
   background-color: var(--White);
+}
+aside .side_bar .btn_copy:hover > span {
   color: var(--side-bar);
 }
 aside .side_bar .result {
@@ -117,6 +134,16 @@ aside .side_bar.enable {
   left: 0%;
 }
 
+@keyframes copied {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
 @media (max-width: 768px) {
   aside {
     width: 50vw;
@@ -148,8 +175,38 @@ main .decoder_container .decoder_text {
 }
 main .decoder_container .decoder_text::placeholder {
   color: var(--text-secondary);
+  font-size: 20px;
 }
 
+@media (max-width: 768px) {
+  main {
+    left: 40%;
+  }
+  main .decoder_container {
+    width: 50vw;
+  }
+  main .decoder_container .decoder_text {
+    font-weight: 400;
+  }
+  main .decoder_container .decoder_text::placeholder {
+    font-size: 20px;
+  }
+}
+@media (max-width: 375px) {
+  main {
+    left: 30%;
+  }
+  main .decoder_container {
+    width: 70vw;
+  }
+  main .decoder_container .decoder_text {
+    font-weight: 300;
+    font-size: 15px;
+  }
+  main .decoder_container .decoder_text::placeholder {
+    font-size: 15px;
+  }
+}
 .btns {
   position: fixed;
   bottom: 10%;

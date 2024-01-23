@@ -17,18 +17,37 @@ aside{
         flex-direction: column;
         box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
         transition: 1s;
+        
         .btn_copy{
-            color: var(--White);
-            padding: 1rem 2rem;
+            height: 3rem;
+            width: 100%;
             border: 1px solid var(--White);
+            transition: 0.5s;
+            color: var(--White);
             letter-spacing: 2px;
             font-weight: bold;
-            transition: 0.5s;
+            overflow: hidden;
 
-            &:hover{
+            .btn_copy_txt{
+                transition: 0.5s;
+                &.copied{
+                    display: none;
+                }
+            }
+            .btn_copied_txt{
+                display: none;
+                &.active{
+                    display: block;
+                    animation: copied 0.5s forwards ease;
+                }
+            }
+           
+            &:hover  {
                 background-color: var(--White);
+                
+            }
+            &:hover > span{
                 color: var(--side-bar);
-    
             }
         }
 
@@ -47,6 +66,17 @@ aside{
     }
  
 }
+@keyframes copied {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
 
 @media (max-width:768px) {
     aside{

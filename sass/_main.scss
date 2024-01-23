@@ -17,7 +17,40 @@ main{
         
         &::placeholder{
             color: var(--text-secondary);
+            font-size: 20px;
         }
       }
     }
+}
+
+@media (max-width:768px){
+  main{
+    left: 40%;
+    .decoder_container{
+      width: 50vw;
+      .decoder_text{
+        font-weight: 400;
+
+          &::placeholder{
+            font-size: 20px;
+        }
+      }
+    }
+  }
+}
+@media (max-width:375px){
+  main{
+    left: 30%;
+    .decoder_container{
+      width: 70vw;
+      .decoder_text{
+        font-weight: 300;
+        font-size: 15px;
+
+          &::placeholder{
+            font-size: 15px;
+        }
+      }
+    }
+  }
 }
