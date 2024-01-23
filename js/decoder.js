@@ -9,18 +9,16 @@ btnDecrypt.addEventListener("click", () => displayTextDecrypt());
 
 
 function displayTextEncrypt() {
-    
     //variavel result foi declarada no sidebar.js
     result.value = textEncrypt();
-    //variavel btnCopyText e btnCopiedText foram declaradas no sidebar.js 
-    btnCopyText.classList.remove("copied");
-    btnCopiedText.classList.remove("active");
-
+    //variavel btnCopyText e btnCopiedText foram declaradas no sidebar.js
    decoderInput.value = "";
+   removeClassBtn()
 }
 function displayTextDecrypt() {
     result.value = textDecrypt();
     decoderInput.value = "";
+    removeClassBtn()
  }
  
 
@@ -39,3 +37,7 @@ function textDecrypt() {
     .replace("ufat", "u")
 }
 
+function removeClassBtn(){
+    btnCopyText.classList.remove("copied");
+    btnCopiedText.classList.remove("active");
+}
