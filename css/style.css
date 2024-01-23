@@ -5,6 +5,7 @@
   --side-bar:#746770;
   --text-secondary:#D0BCB1;
   --White:#FFFFFF;
+  --Red:#F24E1E;
 }
 
 * {
@@ -253,6 +254,61 @@ main .decoder_container .decoder_text::placeholder {
 @media (max-width: 768px) {
   .btns button {
     font-size: 3vw;
+  }
+}
+.message_warning {
+  position: absolute;
+  top: 5%;
+  right: -5%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(242, 79, 30, 0.0980392157);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 10px 14px;
+  border: 1px solid var(--Red);
+}
+.message_warning i {
+  color: var(--Red);
+  font-size: 30px;
+}
+.message_warning .ri-close-fill {
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 20px;
+}
+.message_warning .ri-close-fill:hover {
+  transform: rotate(40deg);
+}
+.message_warning span {
+  color: var(--Red);
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+  .message_warning {
+    top: 30%;
+    right: 0%;
+  }
+}
+@media (max-width: 768px) {
+  .message_warning {
+    top: 50%;
+    right: 0%;
+    height: 200px;
+    width: 200px;
+    flex-direction: column;
+  }
+  .message_warning span {
+    text-align: center;
+  }
+}
+@media (max-width: 425px) {
+  .message_warning {
+    top: 50%;
+    right: -10%;
   }
 }
 #app {

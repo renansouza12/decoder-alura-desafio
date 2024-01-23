@@ -3,6 +3,7 @@
 @use 'sideBar';
 @use 'main';
 @use 'buttons';
+@use 'message';
 #app{
     display: flex;
     flex-direction: column;
