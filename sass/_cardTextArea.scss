@@ -1,0 +1,30 @@
+.cart_text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: url('https://i.pinimg.com/originals/ed/23/9d/ed239ddc0e23afd424de14db792c6bf8.gif') center/cover;
+    padding: 10px;
+    .btns{
+        button{
+            border: 1px solid var(--White);
+            color: var(--White);
+            padding: 5px 13px;
+            letter-spacing: 2px;
+            transition: 0.7s;
+        }
+        button:hover{
+            background-color: var(--White);
+            color: var(--Black);
+        }
+    }
+    textarea{
+        border: 2px solid var(--White);
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: var(--White);
+        padding: 10px;
+    }
+}

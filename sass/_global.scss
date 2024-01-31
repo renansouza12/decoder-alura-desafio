@@ -1,14 +1,17 @@
 :root{
     --bg-color:#B88A73;
     --border-color:#6D3D15;
-    --primary-color:#FAEFD9;
+    --primary-color:#CBBDB0;
     --secondary-color:#FAEFD9;
     --header-card:#BD8442;
+    --h1-color:#754631;
     --title-color:#925B21;
     --text-color:#B98063;
+    --White:#FFFFFF;
+    --Blakc:#000000;
 }
 
-
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -17,8 +20,19 @@
 body{
     height: 100vh;
     background-color: var(--bg-color);
+    font-family: 'Itim', cursive;
+    overflow: hidden;
 }
-
+h1{
+    color: var(--h1-color);
+}
+h2{
+    color: var(--title-color);
+}
+h3{
+    color: var(--title-color);
+    
+}
 p{
     font-size: 15px;
 

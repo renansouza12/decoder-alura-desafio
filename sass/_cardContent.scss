@@ -1,0 +1,38 @@
+.card_content{
+    background-color: var(--primary-color);
+    height: 100%;
+
+    .card_content_title{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        i{
+            font-size: 30px;
+            color: var(--text-color);
+            
+        }
+    }
+    .card_highlite{
+        margin-top: 2rem;
+        background-color: var(--secondary-color);
+        padding: 5px 20px;
+        border: 1px solid var(--text-color);
+        transform: translateY(-50px);
+        width: fit-content;
+        span{
+            letter-spacing: 4px;
+            color: var(--h1-color);
+        }
+        &:nth-child(2){
+            transform: translate(260%, -30px);
+        }
+    }
+    .logo{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 20vw;
+        user-select: none;
+    }
+}

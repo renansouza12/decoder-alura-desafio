@@ -1,16 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/style.css" />
     <title>DecoderV2</title>
-</head>
-<body>
-    
+  </head>
+  <body>
+    <div id="app">
+      <div class="decoder_card ">
+        <div class="card_header">
+          <h3>Decoder.exe</h3>
+          <div class="icons">
+            <img class="icon" src="assets/minimize-icon.svg" alt="" />
+            <img class="icon" src="assets/window-icon.svg" alt="" />
+            <img class="icon" src="assets/close-icon.svg" alt="" />
+          </div>
+        </div>
+        <div class="card_title">
+          <h2>madebyrenan.v2</h2>
+        </div>
+        <div class="card_content">
+          <div class="card_content_title">
+            <a href="https://github.com/renansouza12" target="_blank"
+              ><i class="ph ph-github-logo"></i
+            ></a>
+            <h1>'-'</h1>
+            <i class="ph ph-hamburger"></i>
+          </div>
+          <div class="card_highlite">
+            <span>(⌐■_■)</span>
+          </div>
+          <img src="assets/alura-logo.svg" alt="" class="logo">
+          <div class="card_highlite">
+            <span>OPA</span>
+          </div>
+          <div class="cart_text">
+            <div class="btns">
+                <button class="btn_encrypt">
+                    criptografar
+                </button>
+                <button class="btn_decrypt">
+                    descriptografar
+                </button>
+            </div>
+            <textarea class="decoder_text" cols="30" rows="10" placeholder="..."></textarea>
+          </div>
+        </div>
+      </div>
 
-    <!-- <script src="js/message.js"></script>
+      <div class="message_decoder movableDiv">
+        <div class="card_header">
+            <h3>Decrypted</h3>
+            <div class="icons">
+              <img class="icon" src="assets/minimize-icon.svg" alt="" />
+              <img class="icon" src="assets/window-icon.svg" alt="" />
+              <img class="icon" src="assets/close-icon.svg" alt="" />
+            </div>
+        </div>
+        <div class="message_content">
+            <textarea class="result" readonly="false"  cols="30" rows="10"placeholder="..."></textarea>
+        </div>
+        <div class="message_footer">
+            <button class="btn_copy">
+              <span class="copy">Copiar</span>
+              <span class="copied">Copied</span>
+            </button>
+        </div>
+      </div>
+
+      <div class="warning_message movableDiv">
+        <div class="card_header">
+            <h3>warning</h3>
+            <div class="icons">
+              <img class="icon" src="assets/minimize-icon.svg" alt="" />
+              <img class="icon" src="assets/window-icon.svg" alt="" />
+              <img class="icon" src="assets/close-icon.svg" alt="" />
+            </div>
+          </div>
+          <div class="message">
+            <p>Apenas letras minúsculas e sem acento.</p>
+          </div>
+      </div>
+     
+    </div>
+
     <script src="js/decoder.js"></script>
-    <script src="js/sidebar.js"></script> -->
-</body>
+    <script src="js/copy.js"></script>
+    <script src="./js/move.js"></script>
+  </body>
 </html>

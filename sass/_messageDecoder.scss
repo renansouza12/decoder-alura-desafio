@@ -1,0 +1,62 @@
+.message_decoder{
+    position: absolute;
+    top: 25%;
+    right:20%;
+    transform: translate(-50%,-50%) skew(0deg, -6deg) rotateY(45deg);
+    cursor: grab;
+    height: 300px;
+    width: 250px;
+    border: 2px solid var(--border-color);
+    border-radius: 0.7rem;
+    box-shadow: 0px 4px 4px rgba(0,0,0,.25);
+    user-select: none;
+    overflow: hidden;
+    .card_header{
+        .icons{
+            .icon{
+                width: 20px;
+            }
+        }
+    }
+    .message_content{
+        height: 73%;
+        background: url('https://i.pinimg.com/564x/95/c2/44/95c24478774467547c6dce13d2ec6cdf.jpg') center/cover;
+        opacity: 0.8;
+        padding: 10px;
+        overflow: hidden;
+
+        textarea{
+            height: 100%;
+            width: 100%;
+            color: var(--Black);
+            font-weight: bold;
+        }
+    }
+    .message_footer{
+        background-color: var(--header-card);
+        height: 50%;
+        width: 100%;
+        border-top: 2px solid var(--border-color);
+        
+        button{
+            padding: 9px 20px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: 0.8s;
+
+            .copied{
+                display: none;
+                &.active{
+                    display: block;
+                }
+            }
+        }
+        button:hover{
+            background-color: var(--border-color);
+            color: var(--White);
+        }
+    }
+    &.grabbing{
+        cursor: grabbing;
+       }
+}

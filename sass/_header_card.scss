@@ -1,0 +1,16 @@
+.card_header{
+    background-color: var(--header-card);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 2px solid var(--border-color);
+    .icons{
+        display: flex;
+        gap: 10px;
+
+        .icon{
+            cursor: pointer;
+        }
+
+    }
+}

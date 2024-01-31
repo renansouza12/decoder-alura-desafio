@@ -1,0 +1,36 @@
+.warning_message{
+    border: 1px solid var(--border-color);
+    height: 150px;
+    width: 250px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0%;
+    left: 35%;
+    transform: translate(-50%,-50%) skew(0deg, -6deg) rotateY(45deg);
+    cursor: grab;
+    user-select: none;
+    .card_header{
+        .icons{
+            .icon{
+                width: 18px;
+            }
+        }
+    }
+    .message{
+        background-color: #cbbdb0a0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        p{
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #e73030;
+        }
+    }
+   &.grabbing{
+    cursor: grabbing;
+   }
+}
