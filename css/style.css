@@ -10,6 +10,8 @@
   --text-color:#B98063;
   --White:#FFFFFF;
   --Blakc:#000000;
+  --folder-bg:#CF966B;
+  --folder-f-color:#A56A49;
 }
 
 * {
@@ -290,6 +292,69 @@ textarea {
   100% {
     opacity: 0;
     z-index: -1;
+  }
+}
+.folder {
+  background-color: var(--folder-bg);
+  height: 60px;
+  width: 70px;
+  border-radius: 5px;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  cursor: pointer;
+  transform: skew(0deg, -6deg) rotateY(45deg);
+  z-index: -1;
+  animation: folder 7s ease-in-out forwards;
+  user-select: none;
+}
+.folder .folder_front {
+  background-color: var(--folder-f-color);
+  height: 58px;
+  width: 70px;
+  position: absolute;
+  bottom: 0;
+  transition: 0.7s;
+}
+.folder .folder_front:nth-child(2) {
+  background-color: var(--folder-f-color);
+}
+.folder::after {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 20px;
+  border-radius: 10px;
+  background-color: var(--folder-bg);
+  top: -7%;
+  left: 0;
+}
+.folder:hover .folder_front {
+  transform: translate(-8%, 20%) skew(16deg) scaley(0.6);
+}
+.folder:hover .folder_front:nth-child(2) {
+  transform: translate(8%, 20%) skew(-16deg) scaley(0.6);
+}
+
+.second_folder {
+  position: absolute;
+  right: 0;
+  top: 10%;
+}
+
+.third_folder {
+  position: absolute;
+  right: 0;
+  top: 0%;
+}
+
+@keyframes folder {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    z-index: 1;
   }
 }
 
