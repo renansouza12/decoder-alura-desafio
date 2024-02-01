@@ -75,5 +75,17 @@
     }
     &.grabbing{
         cursor: grabbing;
-       }
+    }
+    &.maximized{
+        height: 400px;
+        width: 350px; 
+        
+        .message_footer{
+            height: 17%;
+
+            button{
+                padding: 25px 20px;
+            }
+        }
+    }
 }

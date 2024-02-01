@@ -4,7 +4,7 @@
     width: 70px;
     border-radius: 5px;
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 30%;
     cursor: pointer;
     transform: skew(0deg, -6deg) rotateY(45deg);
@@ -43,16 +43,6 @@
         transform: translate(8%,20%) skew(-16deg) scaley(0.6);
     }
     
-}
-.second_folder{
-    position: absolute;
-    right: 0;
-    top: 10%;
-}
-.third_folder{
-    position: absolute;
-    right: 0;
-    top: 0%;
 }
 
 @keyframes folder {

@@ -33,4 +33,15 @@
    &.grabbing{
     cursor: grabbing;
    }
+
+   &.maximized{
+    height: 250px;
+    width: 350px;
+
+    .message{
+        p{
+            font-size: 30px;
+        }
+    }
+   }
 }

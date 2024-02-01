@@ -17,14 +17,14 @@
         background-color: var(--secondary-color);
         padding: 5px 20px;
         border: 1px solid var(--text-color);
-        transform: translateY(-50px);
+        transform: translateY(-100%);
         width: fit-content;
         span{
             letter-spacing: 4px;
             color: var(--h1-color);
         }
         &:nth-child(2){
-            transform: translate(260%, -30px);
+            transform: translate(260%, -60%);
         }
     }
     .logo{

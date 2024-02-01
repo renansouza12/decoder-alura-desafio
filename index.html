@@ -9,13 +9,13 @@
   </head>
   <body>
     <div id="app">
-      <div class="decoder_card">
+      <div class="decoder_card movableDiv">
         <div class="card_header">
           <h3>Decoder.exe</h3>
           <div class="icons">
-            <img class="icon" src="assets/minimize-icon.svg" alt="" />
-            <img class="icon" src="assets/window-icon.svg" alt="" />
-            <img class="icon" src="assets/close-icon.svg" alt="" />
+            <img class="icon minimize" src="assets/minimize-icon.svg" alt="" />
+            <img class="icon maximize" src="assets/window-icon.svg" alt="" />
+            <img class="icon close" src="assets/close-icon.svg" alt="" />
           </div>
         </div>
         <div class="card_title">
@@ -54,9 +54,9 @@
         <div class="card_header">
             <h3>Decrypted</h3>
             <div class="icons">
-              <img class="icon" src="assets/minimize-icon.svg" alt="" />
-              <img class="icon" src="assets/window-icon.svg" alt="" />
-              <img class="icon" src="assets/close-icon.svg" alt="" />
+              <img class="icon minimize" src="assets/minimize-icon.svg" alt="" />
+              <img class="icon maximize" src="assets/window-icon.svg" alt="" />
+              <img class="icon close" src="assets/close-icon.svg" alt="" />
             </div>
         </div>
         <div class="message_content">
@@ -76,9 +76,9 @@
         <div class="card_header">
             <h3>warning</h3>
             <div class="icons">
-              <img class="icon" src="assets/minimize-icon.svg" alt="" />
-              <img class="icon" src="assets/window-icon.svg" alt="" />
-              <img class="icon" src="assets/close-icon.svg" alt="" />
+              <img class="icon minimize" src="assets/minimize-icon.svg" alt="" />
+              <img class="icon maximize" src="assets/window-icon.svg" alt="" />
+              <img class="icon close" src="assets/close-icon.svg" alt="" />
             </div>
           </div>
           <div class="message">
@@ -89,7 +89,27 @@
       <div class="screen_load">
           <div class="load"></div>
       </div>
-    
+      
+      <div class="sidebar">
+        <div class="logo">
+          <i class="ph ph-coffee"></i>
+        </div>
+        <div class="cards_icons">
+          <div class="warning_icon icone_icon" title="Warning message">
+            <i class="ph ph-warning-octagon"></i>
+            <div class="minimized_bar"></div>
+          </div>
+
+          <div class="decode_icon icone_icon" title="Decoder">
+            <i class="ph ph-code-block"></i>
+            <div class="minimized_bar"></div>
+          </div>
+
+          <div class="decrypt_icon icone_icon">
+            <i class="ph ph-lock-key"></i>
+          </div>
+        </div>
+      </div>
 
       <div class="folder movableDiv">
         <div class="folder_front"></div>
@@ -108,6 +128,7 @@
 
     <script src="js/decoder.js"></script>
     <script src="js/copy.js"></script>
-    <script src="./js/move.js"></script>
+    <script src="js/move.js"></script>
+    <script src="js/sidebar.js"></script>
   </body>
 </html>

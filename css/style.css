@@ -66,13 +66,13 @@ textarea {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) skew(0deg, -6deg) rotateY(45deg);
-  opacity: 0.8;
   height: 500px;
   width: 400px;
   background-color: var(--secondary-color);
   border-radius: 0.6rem;
   border: 2px solid var(--border-color);
-  transition: 0.7s;
+  cursor: grab;
+  user-select: none;
   overflow: hidden;
 }
 .decoder_card .card_title {
@@ -81,9 +81,15 @@ textarea {
   justify-content: center;
   padding: 1rem 0;
 }
-
-.decoder_card:hover {
-  opacity: 1;
+.decoder_card.grabbing {
+  cursor: grabbing;
+}
+.decoder_card.maximized {
+  height: 600px;
+  width: 600px;
+}
+.decoder_card.maximized .card_highlite:nth-child(2) {
+  transform: translateX(450%);
 }
 
 .card_header {
@@ -119,7 +125,7 @@ textarea {
   background-color: var(--secondary-color);
   padding: 5px 20px;
   border: 1px solid var(--text-color);
-  transform: translateY(-50px);
+  transform: translateY(-100%);
   width: fit-content;
 }
 .card_content .card_highlite span {
@@ -127,7 +133,7 @@ textarea {
   color: var(--h1-color);
 }
 .card_content .card_highlite:nth-child(2) {
-  transform: translate(260%, -30px);
+  transform: translate(260%, -60%);
 }
 .card_content .logo {
   position: absolute;
@@ -236,6 +242,16 @@ textarea {
 .message_decoder.grabbing {
   cursor: grabbing;
 }
+.message_decoder.maximized {
+  height: 400px;
+  width: 350px;
+}
+.message_decoder.maximized .message_footer {
+  height: 17%;
+}
+.message_decoder.maximized .message_footer button {
+  padding: 25px 20px;
+}
 
 .warning_message {
   border: 1px solid var(--border-color);
@@ -269,6 +285,13 @@ textarea {
 .warning_message.grabbing {
   cursor: grabbing;
 }
+.warning_message.maximized {
+  height: 250px;
+  width: 350px;
+}
+.warning_message.maximized .message p {
+  font-size: 30px;
+}
 
 .screen_load {
   position: fixed;
@@ -300,7 +323,7 @@ textarea {
   width: 70px;
   border-radius: 5px;
   position: absolute;
-  top: 20%;
+  top: 10%;
   left: 30%;
   cursor: pointer;
   transform: skew(0deg, -6deg) rotateY(45deg);
@@ -336,18 +359,6 @@ textarea {
   transform: translate(8%, 20%) skew(-16deg) scaley(0.6);
 }
 
-.second_folder {
-  position: absolute;
-  right: 0;
-  top: 10%;
-}
-
-.third_folder {
-  position: absolute;
-  right: 0;
-  top: 0%;
-}
-
 @keyframes folder {
   0% {
     opacity: 0;
@@ -355,6 +366,67 @@ textarea {
   100% {
     opacity: 1;
     z-index: 1;
+  }
+}
+.sidebar {
+  height: 50vh;
+  width: 5vw;
+  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.sidebar i {
+  color: var(--White);
+}
+.sidebar .logo i {
+  font-size: 30px;
+}
+.sidebar .cards_icons {
+  height: 100%;
+  text-align: center;
+}
+.sidebar .cards_icons .icone_icon {
+  background-color: rgba(255, 255, 255, 0.1725490196);
+  padding: 10px 8px;
+  border-top: 1px solid var(--White);
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.sidebar .cards_icons .icone_icon .minimized_bar {
+  display: none;
+  background-color: var(--White);
+  height: 3px;
+  width: 10px;
+  border-radius: 1rem;
+  animation: bar 0.2s ease-in;
+}
+.sidebar .cards_icons .icone_icon .minimized_bar.minimized {
+  display: block;
+  transform: translateX(3px);
+}
+.sidebar .cards_icons .warning_icon {
+  display: none;
+}
+.sidebar .cards_icons .decode_icon {
+  display: none;
+}
+.sidebar .cards_icons .decrypt_icon {
+  display: none;
+}
+
+@keyframes bar {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 10px;
   }
 }
 

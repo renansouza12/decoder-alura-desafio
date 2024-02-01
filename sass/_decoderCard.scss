@@ -3,13 +3,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%) skew(0deg, -6deg) rotateY(45deg);
-    opacity: 0.8;
     height: 500px;
     width: 400px;
     background-color: var(--secondary-color);
     border-radius: 0.6rem;
     border: 2px solid var(--border-color);
-    transition: 0.7s;
+    cursor: grab;
+    user-select: none;
     overflow: hidden;
 
     .card_title{
@@ -18,7 +18,17 @@
         justify-content: center;
         padding: 1rem 0;
     }
-}
-.decoder_card:hover{
-    opacity: 1;
+
+    &.grabbing{
+        cursor: grabbing;
+    }
+
+    &.maximized{
+        height: 600px;
+        width: 600px;
+
+        .card_highlite:nth-child(2){
+            transform: translateX(450%);
+        }
+    }
 }
