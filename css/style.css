@@ -226,6 +226,11 @@ textarea {
   background-color: var(--border-color);
   color: var(--White);
 }
+.message_decoder .message_footer .gif_panda {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
 .message_decoder.grabbing {
   cursor: grabbing;
 }
