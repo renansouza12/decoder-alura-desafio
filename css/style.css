@@ -168,7 +168,7 @@ textarea {
 .message_decoder {
   position: absolute;
   top: 25%;
-  right: 20%;
+  right: 10%;
   transform: translate(-50%, -50%) skew(0deg, -6deg) rotateY(45deg);
   cursor: grab;
   height: 300px;
@@ -209,8 +209,17 @@ textarea {
 }
 .message_decoder .message_footer button .copied {
   display: none;
+  align-items: center;
+  gap: 5px;
+  transition: 0.5s;
 }
-.message_decoder .message_footer button .copied.active {
+.message_decoder .message_footer button .copied i {
+  font-size: 15px;
+}
+.message_decoder .message_footer button.active .copy {
+  display: none;
+}
+.message_decoder .message_footer button.active .copied {
   display: block;
 }
 .message_decoder .message_footer button:hover {

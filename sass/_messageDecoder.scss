@@ -1,7 +1,7 @@
 .message_decoder{
     position: absolute;
     top: 25%;
-    right:20%;
+    right:10%;
     transform: translate(-50%,-50%) skew(0deg, -6deg) rotateY(45deg);
     cursor: grab;
     height: 300px;
@@ -46,10 +46,22 @@
 
             .copied{
                 display: none;
-                &.active{
-                    display: block;
+                align-items: center;
+                gap: 5px;
+                transition: 0.5s;
+
+                i{
+                    font-size: 15px;
                 }
+            
             }
+        
+            &.active .copy{
+              display: none;
+            }
+            &.active .copied{
+                display: block;
+              }
         }
         button:hover{
             background-color: var(--border-color);

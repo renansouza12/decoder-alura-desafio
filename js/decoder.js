@@ -12,16 +12,17 @@ function displayTextEncrypt() {
     result.value = textEncrypt();
     //variavel btnCopyText e btnCopiedText foram declaradas no copy.js
    decoderInput.value = "";
+   btnCopy.classList.remove('active');
 }
 function displayTextDecrypt() {
     result.value = textDecrypt();
     decoderInput.value = "";
-
+    btnCopy.classList.remove('active');
  }
  
 
 function textEncrypt() {
-    return decoderInput.value.replaceAll("e", "enter")
+    return decoderInput.value.toLowerCase().replaceAll("e", "enter")
     .replaceAll("i", "imes")
     .replaceAll("a", "ai")
     .replaceAll("o", "ober")
