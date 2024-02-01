@@ -10,6 +10,7 @@
     transform: translate(-50%,-50%) skew(0deg, -6deg) rotateY(45deg);
     cursor: grab;
     user-select: none;
+    box-shadow: 0px 4px 4px rgba(0,0,0,.25);
     .card_header{
         .icons{
             .icon{
@@ -44,4 +45,14 @@
         }
     }
    }
+}
+
+@media (max-width:768px) {
+    .warning_message{
+        height: 150px;
+        width: 190px;
+
+        bottom: 0%;
+        left: 20%;
+    }
 }

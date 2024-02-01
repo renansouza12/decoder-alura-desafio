@@ -89,3 +89,13 @@
         }
     }
 }
+
+@media (max-width:768px) {
+    .message_decoder{
+        height: 280px;
+        width: 180px;
+
+        top: 25%;
+        right:-20%;
+    }
+}

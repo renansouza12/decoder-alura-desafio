@@ -73,6 +73,7 @@ textarea {
   border: 2px solid var(--border-color);
   cursor: grab;
   user-select: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
 .decoder_card .card_title {
@@ -253,6 +254,14 @@ textarea {
   padding: 25px 20px;
 }
 
+@media (max-width: 768px) {
+  .message_decoder {
+    height: 280px;
+    width: 180px;
+    top: 25%;
+    right: -20%;
+  }
+}
 .warning_message {
   border: 1px solid var(--border-color);
   height: 150px;
@@ -265,6 +274,7 @@ textarea {
   transform: translate(-50%, -50%) skew(0deg, -6deg) rotateY(45deg);
   cursor: grab;
   user-select: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .warning_message .card_header .icons .icon {
   width: 18px;
@@ -293,6 +303,14 @@ textarea {
   font-size: 30px;
 }
 
+@media (max-width: 768px) {
+  .warning_message {
+    height: 150px;
+    width: 190px;
+    bottom: 0%;
+    left: 20%;
+  }
+}
 .screen_load {
   position: fixed;
   height: 100vh;
@@ -368,19 +386,30 @@ textarea {
     z-index: 1;
   }
 }
+@media (max-width: 768px) {
+  .folder {
+    display: none;
+  }
+}
 .sidebar {
-  height: 50vh;
-  width: 5vw;
-  border: 1px solid var(--border-color);
+  height: fit-content;
+  width: fit-content;
+  border: 1px solid var(--White);
   background: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  border-radius: 0.6rem;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 0;
+  padding: 1rem 0.5rem;
+  cursor: grab;
+  position: absolute;
+  top: 30%;
+  left: 7%;
+  transform: translate(-50%, -50%);
+  user-select: none;
 }
 .sidebar i {
   color: var(--White);
@@ -399,7 +428,7 @@ textarea {
   margin-bottom: 1rem;
   cursor: pointer;
 }
-.sidebar .cards_icons .icone_icon .minimized_bar {
+.sidebar .cards_icons .icone_icon .minimized_bar_decode, .sidebar .cards_icons .icone_icon .minimized_bar_decrypt, .sidebar .cards_icons .icone_icon .minimized_bar_warning {
   display: none;
   background-color: var(--White);
   height: 3px;
@@ -407,7 +436,7 @@ textarea {
   border-radius: 1rem;
   animation: bar 0.2s ease-in;
 }
-.sidebar .cards_icons .icone_icon .minimized_bar.minimized {
+.sidebar .cards_icons .icone_icon .minimized_bar_decode.minimized, .sidebar .cards_icons .icone_icon .minimized_bar_decrypt.minimized, .sidebar .cards_icons .icone_icon .minimized_bar_warning.minimized {
   display: block;
   transform: translateX(3px);
 }

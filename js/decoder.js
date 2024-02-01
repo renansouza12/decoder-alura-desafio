@@ -22,7 +22,8 @@ function displayTextDecrypt() {
  
 
 function textEncrypt() {
-    return decoderInput.value.toLowerCase().replaceAll("e", "enter")
+    const accentsRemoved = removeAccents(decoderInput.value);
+    return accentsRemoved.toLowerCase().replaceAll("e", "enter")
     .replaceAll("i", "imes")
     .replaceAll("a", "ai")
     .replaceAll("o", "ober")
@@ -34,4 +35,7 @@ function textDecrypt() {
     .replaceAll("ai", "a")
     .replaceAll("ober", "o")
     .replaceAll("ufat", "u")
+}
+function removeAccents(str) {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }

@@ -1,3 +1,5 @@
+
+
 const btnsMinimize = document.querySelectorAll(".minimize");
 const btnsMaximaize = document.querySelectorAll(".maximize");
 const btnsClose = document.querySelectorAll(".close");
@@ -10,13 +12,15 @@ const decodeIcone = document.querySelector(".decode_icon");
 const warningIcone = document.querySelector(".warning_icon");
 const decryptIcone = document.querySelector(".decrypt_icon");
 
-const minimizeBar = document.querySelector('.minimized_bar');
+const minimizeBarDecode = document.querySelector('.minimized_bar_decode');
+const minimizeBarDecrypt = document.querySelector('.minimized_bar_decrypt');
+const minizeBarWarning = document.querySelector('.minimized_bar_warning');
 
 btnsMinimize.forEach((btnMinimize,i)=>{
     btnMinimize.addEventListener("click", ()=>{
-       i == 0 ?  (minimizeDiv(decoderCard),displayIcone(decodeIcone), addClass(minimizeBar, 'minimized')) : 
-       i == 1 ?  (minimizeDiv(decryptedCard),displayIcone(decryptIcone), addClass(minimizeBar, 'minimized')) :
-         i == 2 ? (minimizeDiv(warningCard),displayIcone(warningIcone), addClass(minimizeBar, 'minimized')) : '';
+        i == 0 ?  (minimizeDiv(decoderCard),displayIcone(decodeIcone), addClass(minimizeBarDecode, 'minimized')) : 
+        i == 1 ?  (minimizeDiv(decryptedCard),displayIcone(decryptIcone), addClass(minimizeBarDecrypt, 'minimized')) :
+        i == 2 ? (minimizeDiv(warningCard),displayIcone(warningIcone), addClass(minizeBarWarning, 'minimized')) : '';
     })
 })
 btnsMaximaize.forEach((btnMaximaize,i)=>{
@@ -26,16 +30,18 @@ btnsMaximaize.forEach((btnMaximaize,i)=>{
 })
 btnsClose.forEach((btnClose,i)=>{
     btnClose.addEventListener("click", ()=>{
-       i == 0 ?  closeDiv(decoderCard) : i == 1 ?  closeDiv(decryptedCard) : i == 2 ? closeDiv(warningCard) : '';
+       i == 0 ?  (closeDiv(decoderCard), displayIcone(decodeIcone) ): 
+       i == 1 ?  (closeDiv(decryptedCard),displayIcone(decryptIcone)) :
+        i == 2 ? (closeDiv(warningCard),displayIcone(warningIcone) ): '';
     })
 })
 
-warningIcone.addEventListener("click", () => displayCardMinimized(warningCard,'minimized'));
-decodeIcone.addEventListener("click", () => displayCardMinimized(decoderCard,'minimized'));
-decryptIcone.addEventListener("click", () => displayCardMinimized(decryptedCard,'minimized'));
+warningIcone.addEventListener("click", () => displayCardMinimized(warningCard, minizeBarWarning));
+decodeIcone.addEventListener("click", () => displayCardMinimized(decoderCard, minimizeBarDecode));
+decryptIcone.addEventListener("click", () => displayCardMinimized(decryptedCard, minimizeBarDecrypt));
 
 function minimizeDiv(div){
-    div.style.opacity = 0;
+    div.style.display = "none";
 }
 function displayIcone(icon){
     icon.style.display = 'block';
@@ -46,16 +52,23 @@ function maximizeDiv(div){
 }
 function closeDiv(div){
     div.style.display = "none";
+    decoderInput.value = "";
 }
-function addClass(div, className){
-    div.classList.add(className);
+function addClass(element, className) {
+    if (!element.classList.contains(className)) {
+        element.classList.add(className);
+    }
 }
 
-function displayCardMinimized(div) {
+function displayCardMinimized(div, minimizeBar) {
     div.style.opacity = 1;
+    div.style.display = "block";
     removeClass(minimizeBar, 'minimized');
 }
 
-function removeClass(div, className) {
-    div.classList.remove(className);
+    
+function removeClass(element, className) {
+    if (element.classList.contains(className)) {
+        element.classList.remove(className);
+    }
 }

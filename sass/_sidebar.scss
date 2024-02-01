@@ -1,17 +1,22 @@
 .sidebar{
-    height: 50vh;
-    width: 5vw;
-    border: 1px solid var(--border-color);
+    height: fit-content;
+    width: fit-content;
+    border: 1px solid var(--White);
     background: rgba(255,255,255,0.1);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    border-radius: 0.6rem;
-
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    padding: 1rem 0;
+    padding: 1rem 0.5rem;
+    cursor: grab;
+    position: absolute;
+    top: 30%;
+    left: 7%;
+    transform: translate(-50%,-50%);
+    user-select: none;
 
     i{
         color: var(--White);
@@ -26,6 +31,8 @@
     .cards_icons{
         height: 100%;
         text-align: center;
+
+
         .icone_icon{
             background-color: #ffffff2c;
             padding: 10px 8px;
@@ -33,7 +40,8 @@
             margin-bottom: 1rem;
             cursor: pointer;
 
-            .minimized_bar{
+            
+            .minimized_bar_decode, .minimized_bar_decrypt, .minimized_bar_warning{
                 display: none;
                 background-color: var(--White);
                 height: 3px;
@@ -45,10 +53,12 @@
                     display: block;
                     transform: translateX(3px);
                 }
-            }
+        }
+
         }
         .warning_icon{
             display: none;  
+            
         }
         .decode_icon{
             display: none;
