@@ -142,7 +142,7 @@ textarea {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  background: url("https://i.pinimg.com/originals/ed/23/9d/ed239ddc0e23afd424de14db792c6bf8.gif") center/cover;
+  background: url("./../assets/animated/cat-gif.gif") center/cover;
   padding: 10px;
 }
 .cart_text .btns button {
@@ -184,7 +184,7 @@ textarea {
 }
 .message_decoder .message_content {
   height: 73%;
-  background: url("https://i.pinimg.com/564x/95/c2/44/95c24478774467547c6dce13d2ec6cdf.jpg") center/cover;
+  background: url("./../assets/duck-image.jpg") center/cover;
   opacity: 0.8;
   padding: 10px;
   overflow: hidden;
@@ -261,6 +261,31 @@ textarea {
 }
 .warning_message.grabbing {
   cursor: grabbing;
+}
+
+.screen_load {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: #E5D3C2;
+  display: grid;
+  place-content: center;
+  animation: loadscreen 3s ease-in-out forwards;
+}
+.screen_load .load {
+  height: 50vh;
+  width: 40vw;
+  background: url("./../assets/animated/load-gif.gif") center/cover;
+}
+
+@keyframes loadscreen {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

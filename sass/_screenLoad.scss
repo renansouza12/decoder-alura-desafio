@@ -1,0 +1,25 @@
+.screen_load{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: #E5D3C2;
+    display: grid;
+    place-content: center;
+    animation: loadscreen 3s ease-in-out forwards;
+    .load{
+        height: 50vh;
+        width: 40vw;
+        background: url('./../assets/animated/load-gif.gif')  center/cover;
+    }
+}
+@keyframes loadscreen {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        z-index: -1;
+    }
+
+         
+}
