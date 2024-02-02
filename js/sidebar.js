@@ -53,6 +53,7 @@ function maximizeDiv(div){
 function closeDiv(div){
     div.style.display = "none";
     decoderInput.value = "";
+    result.value = "";
 }
 function addClass(element, className) {
     if (!element.classList.contains(className)) {

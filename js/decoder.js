@@ -21,7 +21,7 @@ function displayTextDecrypt() {
  
 
 function textEncrypt() {
-    const accentsRemoved = removeAccents(decoderInput.value);
+    let accentsRemoved = removeAccents(decoderInput.value);
     return accentsRemoved.toLowerCase().replaceAll("e", "enter")
     .replaceAll("i", "imes")
     .replaceAll("a", "ai")
@@ -29,7 +29,8 @@ function textEncrypt() {
     .replaceAll("u", "ufat")
 }
 function textDecrypt() {
-    return decoderInput.value.replaceAll("enter", "e")
+    accentsRemoved = removeAccents(decoderInput.value);
+    return accentsRemoved.toLowerCase().replaceAll("enter", "e")
     .replaceAll("imes", "i")
     .replaceAll("ai", "a")
     .replaceAll("ober", "o")
