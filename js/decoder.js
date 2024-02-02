@@ -11,12 +11,11 @@ function displayTextEncrypt() {
     //variavel result foi declarada no copy.js
     result.value = textEncrypt();
     //variavel btnCopyText e btnCopiedText foram declaradas no copy.js
-   decoderInput.value = "";
    btnCopy.classList.remove('active');
 }
 function displayTextDecrypt() {
     result.value = textDecrypt();
-    decoderInput.value = "";
+
     btnCopy.classList.remove('active');
  }
  
