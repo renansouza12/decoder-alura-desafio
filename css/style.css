@@ -92,6 +92,9 @@ textarea {
 .decoder_card.maximized .card_highlite:nth-child(2) {
   transform: translateX(450%);
 }
+.decoder_card.maximized .logo {
+  top: 35%;
+}
 
 .card_header {
   background-color: var(--header-card);
