@@ -1,101 +1,114 @@
-.message_decoder{
+.message_decoder {
     position: absolute;
     top: 25%;
-    right:10%;
-    transform: translate(-50%,-50%) skew(0deg, -6deg) rotateY(45deg);
+    right: 10%;
+    transform: translate(-50%, -50%) skew(0deg, -6deg) rotateY(45deg);
+    transition: 0.1s;
     cursor: grab;
     height: 300px;
     width: 250px;
     border: 2px solid var(--border-color);
     border-radius: 0.7rem;
-    box-shadow: 0px 4px 4px rgba(0,0,0,.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
     user-select: none;
     overflow: hidden;
-    .card_header{
-        .icons{
-            .icon{
+
+    .card_header {
+        .icons {
+            .icon {
                 width: 20px;
             }
         }
     }
-    .message_content{
+
+    .message_content {
         height: 73%;
         background: url('./../assets/duck-image.jpg') center/cover;
         opacity: 0.8;
         padding: 10px;
         overflow: hidden;
 
-        textarea{
+        textarea {
             height: 100%;
             width: 100%;
             color: var(--Black);
             font-weight: bold;
         }
     }
-    .message_footer{
+
+    .message_footer {
         background-color: var(--header-card);
         height: 50%;
         width: 100%;
         border-top: 2px solid var(--border-color);
-        
-        button{
+
+        button {
             padding: 9px 20px;
             border: 1px solid var(--border-color);
             overflow: hidden;
             transition: 0.8s;
 
-            .copied{
+            .copied {
                 display: none;
                 align-items: center;
                 gap: 5px;
                 transition: 0.5s;
 
-                i{
+                i {
                     font-size: 15px;
                 }
-            
+
             }
-        
-            &.active .copy{
-              display: none;
+
+            &.active .copy {
+                display: none;
             }
-            &.active .copied{
+
+            &.active .copied {
                 display: block;
-              }
+            }
         }
-        button:hover{
+
+        button:hover {
             background-color: var(--border-color);
             color: var(--White);
         }
-        .gif_panda{
+
+        .gif_panda {
             position: absolute;
             right: 0;
             bottom: 0;
         }
     }
-    &.grabbing{
+
+    &.grabbing {
         cursor: grabbing;
     }
-    &.maximized{
+
+    &.maximized {
         height: 400px;
-        width: 350px; 
-        
-        .message_footer{
+        width: 350px;
+
+        .message_footer {
             height: 17%;
 
-            button{
+            button {
                 padding: 25px 20px;
             }
         }
     }
+
+    &.rotated {
+        transform: translate(-50%, -50%) skew(0deg, 0deg) rotateY(0deg);
+    }
 }
 
 @media (max-width:768px) {
-    .message_decoder{
+    .message_decoder {
         height: 280px;
         width: 180px;
 
         top: 25%;
-        right:-20%;
+        right: -20%;
     }
 }

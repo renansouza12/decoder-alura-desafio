@@ -73,6 +73,7 @@ textarea {
   border: 2px solid var(--border-color);
   cursor: grab;
   user-select: none;
+  transition: 0.1s;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
@@ -94,6 +95,9 @@ textarea {
 }
 .decoder_card.maximized .logo {
   top: 35%;
+}
+.decoder_card.rotated {
+  transform: translate(-50%, -50%) skew(0deg, 0deg) rotateY(0deg);
 }
 
 .card_header {
@@ -182,6 +186,7 @@ textarea {
   top: 25%;
   right: 10%;
   transform: translate(-50%, -50%) skew(0deg, -6deg) rotateY(45deg);
+  transition: 0.1s;
   cursor: grab;
   height: 300px;
   width: 250px;
@@ -256,6 +261,9 @@ textarea {
 .message_decoder.maximized .message_footer button {
   padding: 25px 20px;
 }
+.message_decoder.rotated {
+  transform: translate(-50%, -50%) skew(0deg, 0deg) rotateY(0deg);
+}
 
 @media (max-width: 768px) {
   .message_decoder {
@@ -276,6 +284,7 @@ textarea {
   left: 35%;
   transform: translate(-50%, -50%) skew(0deg, -6deg) rotateY(45deg);
   cursor: grab;
+  transition: 0.1s;
   user-select: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -304,6 +313,9 @@ textarea {
 }
 .warning_message.maximized .message p {
   font-size: 30px;
+}
+.warning_message.rotated {
+  transform: translate(-50%, -50%) skew(0deg, 0deg) rotateY(0deg);
 }
 
 @media (max-width: 768px) {
@@ -431,7 +443,9 @@ textarea {
   margin-bottom: 1rem;
   cursor: pointer;
 }
-.sidebar .cards_icons .icone_icon .minimized_bar_decode, .sidebar .cards_icons .icone_icon .minimized_bar_decrypt, .sidebar .cards_icons .icone_icon .minimized_bar_warning {
+.sidebar .cards_icons .icone_icon .minimized_bar_decode,
+.sidebar .cards_icons .icone_icon .minimized_bar_decrypt,
+.sidebar .cards_icons .icone_icon .minimized_bar_warning {
   display: none;
   background-color: var(--White);
   height: 3px;
@@ -439,7 +453,9 @@ textarea {
   border-radius: 1rem;
   animation: bar 0.2s ease-in;
 }
-.sidebar .cards_icons .icone_icon .minimized_bar_decode.minimized, .sidebar .cards_icons .icone_icon .minimized_bar_decrypt.minimized, .sidebar .cards_icons .icone_icon .minimized_bar_warning.minimized {
+.sidebar .cards_icons .icone_icon .minimized_bar_decode.minimized,
+.sidebar .cards_icons .icone_icon .minimized_bar_decrypt.minimized,
+.sidebar .cards_icons .icone_icon .minimized_bar_warning.minimized {
   display: block;
   transform: translateX(3px);
 }
@@ -451,6 +467,12 @@ textarea {
 }
 .sidebar .cards_icons .decrypt_icon {
   display: none;
+}
+.sidebar .cards_icons .rotate_icon {
+  transition: 0.6s;
+}
+.sidebar .cards_icons .rotate_icon.rotated {
+  border-bottom: 2px solid var(--White);
 }
 
 @keyframes bar {
