@@ -21,10 +21,10 @@ A letra "u" é convertida para "ufat"
 
 ## Screenshots
 
-![App Screenshot](https://i.ibb.co/6n6dhD3/Captura-de-tela-2024-01-26-161539.png)
+![App Screenshot](https://i.ibb.co/WyFX44P/decoder-image.png)
 
 
-![App Screenshot](https://i.ibb.co/GtsRqsW/Captura-de-tela-2024-01-26-161610.png)
+![App Screenshot](https://i.ibb.co/wMhBdxk/decoder-image1.png)
 
 
 
