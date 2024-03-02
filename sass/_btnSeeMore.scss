@@ -1,0 +1,54 @@
+.btn_more {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-content: center;
+
+    a {
+        color: var(--White);
+        padding: 1rem 2rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+
+    transition: 1s 0.5s;
+
+    &::after,
+    &::before {
+        position: absolute;
+        content: "";
+        background-color: var(--White);
+        transition: 0.5s;
+    }
+
+    &::after {
+        height: 1px;
+        width: 0%;
+        right: 0;
+        top: 0;
+    }
+
+    &::before {
+        height: 1px;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+
+    &:hover::before {
+        width: 0%;
+    }
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+}
